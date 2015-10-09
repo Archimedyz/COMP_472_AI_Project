@@ -1,0 +1,20 @@
+﻿Build started 10/08/15 6:40:16 PM.
+     1>Project "C:\Users\Awais\documents\visual studio 2013\Projects\COMP_472_AI_Project\COMP_472_AI_Project\COMP_472_AI_Project.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameBoard.cpp
+         GameBoard.cpp
+     1>c:\users\awais\documents\visual studio 2013\projects\comp_472_ai_project\comp_472_ai_project\gameboard.cpp(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\awais\documents\visual studio 2013\projects\comp_472_ai_project\comp_472_ai_project\gameboard.cpp(140): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>c:\users\awais\documents\visual studio 2013\projects\comp_472_ai_project\comp_472_ai_project\gameboard.cpp(141): warning C4553: '==' : operator has no effect; did you intend '='?
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Awais\documents\visual studio 2013\Projects\COMP_472_AI_Project\Debug\COMP_472_AI_Project.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Awais\documents\visual studio 2013\Projects\COMP_472_AI_Project\Debug\COMP_472_AI_Project.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Awais\documents\visual studio 2013\Projects\COMP_472_AI_Project\Debug\COMP_472_AI_Project.lib" /MACHINE:X86 Debug\AIPlayer.obj
+         Debug\GameBoard.obj
+         Debug\HumanPlayer.obj
+         Debug\main.obj
+         Debug\Player.obj
+         COMP_472_AI_Project.vcxproj -> C:\Users\Awais\documents\visual studio 2013\Projects\COMP_472_AI_Project\Debug\COMP_472_AI_Project.exe
+     1>Done Building Project "C:\Users\Awais\documents\visual studio 2013\Projects\COMP_472_AI_Project\COMP_472_AI_Project\COMP_472_AI_Project.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.92
