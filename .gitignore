@@ -1,0 +1,17 @@
+# gitignore file for COMP 472 AI Project.
+
+# files found in the root
+*.sln
+*.sdf
+Debug/*
+
+
+# files found in the Debug Folder
+*.vcxproj
+*.vcxproj.filters
+
+# no idea where these are, but not necessary . . .
+
+*.opensdf
+*.v12
+*.v12.suo
