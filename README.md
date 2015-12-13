@@ -3,7 +3,9 @@
 ####	Awais Ali
 ----
 
-DESCRIPTION:
+*The executable (.exe) can be found int the* `Debug/` *folder.*
+
+**DESCRIPTION:**
 	
 The application is a game called "Hungry Birds."
 It is a two-player, turn-based game, in which player 1 controls a single piece, the larva, and player 2 controls 4 bird pieces.
@@ -37,7 +39,7 @@ Input for making moves, for any piece is of the format: "<src> <dest>" (this inc
 	* stuff
 - After entering a move (be it human or AI), you must press the Return Key (or Enter Key) to continue if the input was valid. This is simply employed to check the input provided by the AI, as wel as the time taken.
 
-NOTES:
+**NOTES:**
 
 - This application was a project for the Artificial Intelligence course offered at Concordia University (Montreal) in the Fall Semeters of 2015.
 - The Application uses a MiniMax Algotirthm (no alpha-beta pruning) with a simple heuristic function.
