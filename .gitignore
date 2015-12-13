@@ -4,6 +4,7 @@
 *.sln
 *.sdf
 Debug/*
+!Debug/COMP_472_AI_Project.exe
 
 
 # files found in the Debug Folder
