@@ -3,6 +3,7 @@
 
 #include <string>
 #include <chrono>
+#include "GameBoard.h"
 
 class Player {
 public :

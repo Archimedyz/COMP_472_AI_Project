@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "GameBoard.h"
 #include <iostream>
 
 Player::Player() {

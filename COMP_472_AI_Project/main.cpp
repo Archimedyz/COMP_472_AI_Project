@@ -41,12 +41,12 @@ void mainMenu() {
 			 << "---------------------------------------------------" << endl
 			 << "Choose a game mode." << endl
 			 << "\t1. Human vs Human" << endl
-			 << "\t2. Human vs AI (under construction)" << endl
-			 << "\t3. AI vs Human (under construction)" << endl
-			 << "\t4. AI vs AI (under construction)" << endl
+			 << "\t2. Human vs AI(Birds)" << endl
+			 << "\t3. AI(Larva) vs Human" << endl
+			 << "\t4. AI(Larva) vs AI(Birds)" << endl
 			 << "\t5. Exit" << endl
 			 << "---------------------------------------------------" << endl
-			 << (selection_error ? "Invalid Selection. Please enter either 1 2 or 3." : "") << endl
+			 << (selection_error ? "Invalid Selection. Please enter either 1, 2, 3, or 4.\nEnter 5 to quit." : "") << endl
 			 << "Selection: ";
 		try {
 	
@@ -83,11 +83,11 @@ void initGame(Gamemode g) {
 	// if there was a previous game, destroy the old player pointers.
 	if(player_one != nullptr) {
 		delete player_one;
-		player_one = NULL;
+		player_one = nullptr;
 	}
 	if(player_two != nullptr) {
 		delete player_two;
-		player_two = NULL;
+		player_two = nullptr;
 	}
 
 	// Initialize players, and board.
@@ -96,19 +96,13 @@ void initGame(Gamemode g) {
 		player_two = new HumanPlayer();
 	} else if(g == HUMAN_AI) {
 		player_one = new HumanPlayer();
-		player_two = new AIPlayer();
-		std::cout << std::endl << "Currently Under Construction. Please try again at a later time." << std::endl;
-		return;
+		player_two = new AIPlayer(gb);
 	} else if(g == AI_HUMAN) {
-		player_one = new AIPlayer();
+		player_one = new AIPlayer(gb);
 		player_two = new HumanPlayer();
-		std::cout << std::endl << "Currently Under Construction. Please try again at a later time." << std::endl;
-		return;
 	} else { // only other option is g == AI_AI.
-		player_one = new AIPlayer();
-		player_two = new AIPlayer();
-		std::cout << std::endl << "Currently Under Construction. Please try again at a later time." << std::endl;
-		return;
+		player_one = new AIPlayer(gb);
+		player_two = new AIPlayer(gb);
 	}
 
 	play();
@@ -138,16 +132,19 @@ void play() {
 		std::cout << "MOVE: ";
 
 		string move_input = "";
-
+		
 		if(gb->isPlayerOneTurn()) {
 			move_input = player_one->makeMove();
 		} else {
 			move_input = player_two->makeMove();
 		}
 
-		// parse the input, trim extra whitespace
-		// TRIM HERE
+		cout << "Player " << (gb->isPlayerOneTurn() ? "1" : "2") << " entered: " << move_input << endl;
+		printf("Time for Move: %.6fs\n", (gb->isPlayerOneTurn() ? player_one->getMoveTime() : player_two->getMoveTime()));
+		cout << "Press Enter to continue . . .";
+		getchar();
 		
+		// parse the input
 		char fromPos[2];
 		char toPos[2];
 		
@@ -156,7 +153,6 @@ void play() {
 		toPos[0] = move_input[3];
 		toPos[1] = move_input[4];
 
-		printf("Time for Move: %.6fs\n", (gb->isPlayerOneTurn() ? player_one->getMoveTime() : player_two->getMoveTime()));
 		
 		// make the move, if made, then continue, else display an error message.
 		valid_move = gb->movePiece(fromPos, toPos);

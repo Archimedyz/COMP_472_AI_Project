@@ -131,8 +131,8 @@ bool GameBoard::movePiece(char fromPos[2], char toPos[2]) {
 	} else {
 		for(int i = 0; i < 4; ++i) {
 			if(bird_pos[i][0] == from_i && bird_pos[i][1] == from_j) {
-				bird_pos[i][0] == to_i;
-				bird_pos[i][1] == to_j;
+				bird_pos[i][0] = to_i;
+				bird_pos[i][1] = to_j;
 				break;
 			}
 		}
@@ -203,4 +203,11 @@ bool GameBoard::validatePosition(int i, int j) {
 	}
 
 	return true;
+}
+
+void GameBoard::getPositionArray(int positions[5][2]) {
+	memcpy(&positions[0] , larva_pos, 2*sizeof(int));
+	for(int i = 0; i < 4; ++i) {
+		memcpy(positions[1+i], bird_pos[i], 2*sizeof(int));
+	}
 }
