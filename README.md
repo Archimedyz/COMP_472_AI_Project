@@ -1,6 +1,5 @@
 ----
 ###	COMP_472_AI_Project
-----
 ####	Awais Ali
 ----
 
@@ -9,6 +8,7 @@ DESCRIPTION:
 The application is a game called "Hungry Birds."
 It is a two-player, turn-based game, in which player 1 controls a single piece, the larva, and player 2 controls 4 bird pieces.
 The rules are as follows:
+
 1. Larva plays first. Birds play second.
 2. The Larva may move in the following for directions:
 	- Up-Right
@@ -38,8 +38,9 @@ Input for making moves, for any piece is of the format: "<src> <dest>" (this inc
 - After entering a move (be it human or AI), you must press the Return Key (or Enter Key) to continue if the input was valid. This is simply employed to check the input provided by the AI, as wel as the time taken.
 
 NOTES:
-	This application was a project for the Artificial Intelligence course offered at Concordia University (Montreal) in the Fall Semeters of 2015.
-	The Application uses a MiniMax Algotirthm (no alpha-beta pruning) with a simple heuristic function.
-	The AI players look  ahead 7 levels fromt he current state to make their decision, mostly due to the time restrictions on the project. (max: 3 seconds per move as either player.)
+
+- This application was a project for the Artificial Intelligence course offered at Concordia University (Montreal) in the Fall Semeters of 2015.
+- The Application uses a MiniMax Algotirthm (no alpha-beta pruning) with a simple heuristic function.
+- The AI players look  ahead 7 levels fromt he current state to make their decision, mostly due to the time restrictions on the project. (max: 3 seconds per move as either player.)
 
 			
